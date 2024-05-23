@@ -1,4 +1,4 @@
-TMAM
+# TMAM
 
 For running OpenGL we need to download and include some headers etc. This guide is for Windows only.
 
@@ -50,3 +50,9 @@ maxCoeff = (std::max)(coeff, maxCoeff);
 Go to Includes/igl/principal_curvature.cpp and replace line 228 with:
 max_sp = - (std::numeric_limits::max)();
 This ensures compiler properly recognizes the functions. (No idea why it would not work without this)
+
+## Acknowledgements
+
+- For the non-linear unwrapping, we directly used https://github.com/GeometryCollective/boundary-first-flattening
+- We implemented "S. Yoshizawa, A. Belyaev and H. P. Seidel, "A fast and simple stretch-minimizing mesh parameterization," Proceedings Shape Modeling Applications, 2004., Genova, Italy, 2004, pp. 200-208, doi: 10.1109/SMI.2004.1314507"
+
